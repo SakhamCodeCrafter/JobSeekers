@@ -35,19 +35,6 @@ const userSchema = new mongoose.Schema({
       },
     },
   ],
-  photo: {
-    type: String,
-    default: 'default_photo_url.jpg'
-  },
-  address: {
-    type: String,
-  },
-  skills: {
-    type: [String],
-  },
-  qualifications: {
-    type: [String],
-  },
 });
 
 userSchema.pre("save", async function (next) {
