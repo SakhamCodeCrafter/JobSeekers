@@ -1,5 +1,4 @@
 const jwt = require("jsonwebtoken");
-const nodemailer = require("nodemailer");
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const router = express.Router();
@@ -134,7 +133,6 @@ router.post("/registerEmployer", async (req, res) => {
     password,
     cpassword,
     companyInformation,
-    contactInformation,
     companyAddress,
   } = req.body;
 
@@ -160,13 +158,12 @@ router.post("/registerEmployer", async (req, res) => {
         password,
         cpassword,
         companyInformation,
-        contactInformation,
         companyAddress,
       });
 
       await newUserEmployer.save();
 
-      res.status(201).json({ message: "UserEmployer registered successfully" });
+      res.status(201).json({ message: "Employer registered successfully" });
     }
   } catch (err) {
     console.error(err);
