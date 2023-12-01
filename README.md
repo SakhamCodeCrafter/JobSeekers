@@ -32,7 +32,7 @@ Step 1 : Go to CLI
          
 Step 2 : ADD PORT, EMAIL, PASSSWORD, DATABASE IN config.js
 
-          PORT = 8000
+          PORT = <PORT_NO>
           EMAIL = <YOUR_EMAIL>
           PASSWORD = <YOUR_PASSWORD>
           DATABSE = <DB_LINK>
